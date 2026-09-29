@@ -1,0 +1,21 @@
+---
+h1:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.4
+h2:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.3
+sw1:
+    username: 
+    password: 
+    platform: sonic-vs
+    hostname: 172.20.20.5
+sw2:
+    username: 
+    password: 
+    platform: sonic-vs
+    hostname: 172.20.20.2

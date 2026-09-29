@@ -1,0 +1,105 @@
+{
+  "name": "lab1",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-bd2248514852",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": [],
+  "nodes": {
+    "sw1": {
+      "index": "0",
+      "shortname": "sw1",
+      "longname": "clab-lab1-sw1",
+      "fqdn": "sw1.lab1.io",
+      "group": "",
+      "labdir": "/workspaces/sonic-lab/clab-lab1/sw1",
+      "kind": "sonic-vs",
+      "image": "docker-sonic-vs:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-git-branch": "main",
+        "clab-git-hash": "0b6c7ee",
+        "clab-mgmt-net-bridge": "br-bd2248514852",
+        "clab-node-group": "",
+        "clab-node-kind": "sonic-vs",
+        "clab-node-lab-dir": "/workspaces/sonic-lab/clab-lab1/sw1",
+        "clab-node-longname": "clab-lab1-sw1",
+        "clab-node-name": "sw1",
+        "clab-node-type": "",
+        "clab-owner": "codespace",
+        "clab-topo-file": "/workspaces/sonic-lab/lab1.clab.yml",
+        "containerlab": "lab1"
+      },
+      "port-bindings": [
+      ]
+    },
+    "sw2": {
+      "index": "1",
+      "shortname": "sw2",
+      "longname": "clab-lab1-sw2",
+      "fqdn": "sw2.lab1.io",
+      "group": "",
+      "labdir": "/workspaces/sonic-lab/clab-lab1/sw2",
+      "kind": "sonic-vs",
+      "image": "docker-sonic-vs:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-git-branch": "main",
+        "clab-git-hash": "0b6c7ee",
+        "clab-mgmt-net-bridge": "br-bd2248514852",
+        "clab-node-group": "",
+        "clab-node-kind": "sonic-vs",
+        "clab-node-lab-dir": "/workspaces/sonic-lab/clab-lab1/sw2",
+        "clab-node-longname": "clab-lab1-sw2",
+        "clab-node-name": "sw2",
+        "clab-node-type": "",
+        "clab-owner": "codespace",
+        "clab-topo-file": "/workspaces/sonic-lab/lab1.clab.yml",
+        "containerlab": "lab1"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "sw1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:c9:d8:48",
+          "peer": "z"
+        },
+        "z": {
+          "node": "sw2",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:d1:2f:3f",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+name: lab3-intervlan
+topology:
+  nodes:
+    sw1:
+      kind: sonic-vs
+      image: docker-sonic-vs:latest
+    h1:
+      kind: linux
+      image: alpine:latest
+      exec:
+        - ip link set eth1 up
+        - ip addr add 10.10.10.1/24 dev eth1
+        - ip route replace default via 10.10.10.254
+    h2:
+      kind: linux
+      image: alpine:latest
+      exec:
+        - ip link set eth1 up
+        - ip addr add 10.20.20.1/24 dev eth1
+        - ip route replace default via 10.20.20.254
+  links:
+    - endpoints: ["h1:eth1", "sw1:eth1"]
+    - endpoints: ["h2:eth1", "sw1:eth2"]
