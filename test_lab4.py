@@ -54,6 +54,9 @@ def test_sw1_can_ping_sw3_loopback():
 
 
 def test_link_failure_removes_route_and_recovery_restores_it():
+    # Precondition: the route must exist before we break anything,
+    # otherwise "route is gone" below would pass for the wrong reason.
+    assert has_bgp_route("sw1", "3.3.3.3/32"), "precondition failed: sw1 has no route to 3.3.3.3 before the test"
     try:
         run("sw3", "config interface shutdown Ethernet0")
         gone = wait_until(lambda: not has_bgp_route("sw1", "3.3.3.3/32"), timeout=30)
