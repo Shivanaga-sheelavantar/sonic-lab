@@ -1,0 +1,25 @@
+name: lab2
+topology:
+  nodes:
+    sw1:
+      kind: sonic-vs
+      image: docker-sonic-vs:latest
+    sw2:
+      kind: sonic-vs
+      image: docker-sonic-vs:latest
+    h1:
+      kind: linux
+      image: alpine:latest
+      exec:
+        - ip link set eth1 up
+        - ip addr add 10.10.10.1/24 dev eth1
+    h2:
+      kind: linux
+      image: alpine:latest
+      exec:
+        - ip link set eth1 up
+        - ip addr add 10.10.10.2/24 dev eth1
+  links:
+    - endpoints: ["sw1:eth1", "sw2:eth1"]
+    - endpoints: ["h1:eth1", "sw1:eth2"]
+    - endpoints: ["h2:eth1", "sw2:eth2"]
