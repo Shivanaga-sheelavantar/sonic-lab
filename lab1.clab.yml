@@ -1,0 +1,11 @@
+name: lab1
+topology:
+  nodes:
+    sw1:
+      kind: sonic-vs
+      image: docker-sonic-vs:latest
+    sw2:
+      kind: sonic-vs
+      image: docker-sonic-vs:latest
+  links:
+    - endpoints: ["sw1:eth1", "sw2:eth1"]
