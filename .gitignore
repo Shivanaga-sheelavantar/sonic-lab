@@ -2,4 +2,4 @@ docker-sonic-vs
 docker-sonic-vs.gz
 clab-*/
 __pycache__/
-.pytest_cache/
+.pytest_cache/clab-*/
