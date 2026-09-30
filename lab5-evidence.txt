@@ -1,0 +1,75 @@
+== Before ==
+09:25:31
+sw1
+8: eth1@Ethernet24: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state forwarding priority 32 cost 2 
+12: eth2@Ethernet32: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state forwarding priority 32 cost 2 
+sw2
+7: eth1@Ethernet24: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state forwarding priority 32 cost 2 
+9: eth2@Ethernet28: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state blocking priority 32 cost 2 
+sw3
+10: eth1@Ethernet36: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state forwarding priority 32 cost 2 
+11: eth2@Ethernet32: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state forwarding priority 32 cost 2 
+== Shut sw2 eth1 ==
+09:25:31
+09:25:31
+7: eth1@Ethernet24: <BROADCAST,MULTICAST,PROMISC,M-DOWN> mtu 9122 master br0 state disabled priority 32 cost 2 
+9: eth2@Ethernet28: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state listening priority 32 cost 2 
+09:25:36
+7: eth1@Ethernet24: <BROADCAST,MULTICAST,PROMISC,M-DOWN> mtu 9122 master br0 state disabled priority 32 cost 2 
+9: eth2@Ethernet28: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state listening priority 32 cost 2 
+09:25:41
+7: eth1@Ethernet24: <BROADCAST,MULTICAST,PROMISC,M-DOWN> mtu 9122 master br0 state disabled priority 32 cost 2 
+9: eth2@Ethernet28: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state listening priority 32 cost 2 
+09:25:46
+7: eth1@Ethernet24: <BROADCAST,MULTICAST,PROMISC,M-DOWN> mtu 9122 master br0 state disabled priority 32 cost 2 
+9: eth2@Ethernet28: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state listening priority 32 cost 2 
+09:25:51
+7: eth1@Ethernet24: <BROADCAST,MULTICAST,PROMISC,M-DOWN> mtu 9122 master br0 state disabled priority 32 cost 2 
+9: eth2@Ethernet28: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state learning priority 32 cost 2 
+09:25:56
+7: eth1@Ethernet24: <BROADCAST,MULTICAST,PROMISC,M-DOWN> mtu 9122 master br0 state disabled priority 32 cost 2 
+9: eth2@Ethernet28: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state learning priority 32 cost 2 
+09:26:01
+7: eth1@Ethernet24: <BROADCAST,MULTICAST,PROMISC,M-DOWN> mtu 9122 master br0 state disabled priority 32 cost 2 
+9: eth2@Ethernet28: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state learning priority 32 cost 2 
+09:26:06
+7: eth1@Ethernet24: <BROADCAST,MULTICAST,PROMISC,M-DOWN> mtu 9122 master br0 state disabled priority 32 cost 2 
+9: eth2@Ethernet28: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state forwarding priority 32 cost 2 
+09:26:11
+7: eth1@Ethernet24: <BROADCAST,MULTICAST,PROMISC,M-DOWN> mtu 9122 master br0 state disabled priority 32 cost 2 
+9: eth2@Ethernet28: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state forwarding priority 32 cost 2 
+09:26:16
+7: eth1@Ethernet24: <BROADCAST,MULTICAST,PROMISC,M-DOWN> mtu 9122 master br0 state disabled priority 32 cost 2 
+9: eth2@Ethernet28: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state forwarding priority 32 cost 2 
+== Restore ==
+09:26:21
+09:26:22
+7: eth1@Ethernet24: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state listening priority 32 cost 2 
+9: eth2@Ethernet28: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state forwarding priority 32 cost 2 
+09:26:27
+7: eth1@Ethernet24: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state listening priority 32 cost 2 
+9: eth2@Ethernet28: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state blocking priority 32 cost 2 
+09:26:32
+7: eth1@Ethernet24: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state listening priority 32 cost 2 
+9: eth2@Ethernet28: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state blocking priority 32 cost 2 
+09:26:37
+7: eth1@Ethernet24: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state listening priority 32 cost 2 
+9: eth2@Ethernet28: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state blocking priority 32 cost 2 
+09:26:42
+7: eth1@Ethernet24: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state learning priority 32 cost 2 
+9: eth2@Ethernet28: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state blocking priority 32 cost 2 
+09:26:47
+7: eth1@Ethernet24: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state learning priority 32 cost 2 
+9: eth2@Ethernet28: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state blocking priority 32 cost 2 
+09:26:52
+7: eth1@Ethernet24: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state learning priority 32 cost 2 
+9: eth2@Ethernet28: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state blocking priority 32 cost 2 
+09:26:57
+7: eth1@Ethernet24: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state forwarding priority 32 cost 2 
+9: eth2@Ethernet28: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state blocking priority 32 cost 2 
+09:27:02
+7: eth1@Ethernet24: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state forwarding priority 32 cost 2 
+9: eth2@Ethernet28: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state blocking priority 32 cost 2 
+09:27:07
+7: eth1@Ethernet24: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state forwarding priority 32 cost 2 
+9: eth2@Ethernet28: <BROADCAST,MULTICAST,PROMISC,UP,LOWER_UP,M-DOWN> mtu 9122 master br0 state blocking priority 32 cost 2 
